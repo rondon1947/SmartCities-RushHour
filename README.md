@@ -24,8 +24,8 @@ These instructions will get anyone a copy of the project up and running on his/h
 
 This contains a list of things a person needs before-hand to install the software and how to install them.
 
-```
-Give examples
+```bash    
+pip install -r requirements.txt 
 ```
 
 ### Installing
