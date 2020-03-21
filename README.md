@@ -60,6 +60,7 @@ Add additional notes about how to deploy this on a live system
 ## Built With (Tech Stack)
 
 * [Flutter](https://flutter.dev/) - The app development framework used
+* [Node.js](https://nodejs.org/) - Website Backend development environment , also used to integrate ML project in a website
 
 ## Authors
 
