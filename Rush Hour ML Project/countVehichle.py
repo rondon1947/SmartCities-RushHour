@@ -41,32 +41,6 @@ def countVeh(imagePath):
 
   allImageCount[imagePath]=countJson
     
-def get_frames(video_file):
-    
-  video = cv2.VideoCapture(video_file)
-
-  if not video.isOpened():
-    
-    print("[ERROR TO READ VIDEO FILE]", video_file)
-    video.release()
-    return
-
-  frames = []
-  
-  frame_count = 0
-
-  while video.isOpened():
-    
-    status, frame = video.read()
-
-    if not status:
-      break
-    
-  frames.append(frame)
-
-  video.release()
-
-  return frames
 
 def countVehicleVideo(videoPath):
   """[summary]
@@ -75,42 +49,65 @@ def countVehicleVideo(videoPath):
   Arguments:
       videoPath {[string]} -- [VideoPath]
   """
-  
-  frames=get_frames(videoPath)
 
-  for i,image in enumerate(frames):
-                
-    #image = cv2.imread(imagePath)
-    #boundingbox, label, conf = cv.detect_common_objects(image)
+  vidObj = cv2.VideoCapture(videoPath)
+
+  count = 0
+  
+  success = 1
+
+  while success: 
+
+    success, image = vidObj.read()
+    
+
     boundingbox, label, conf = cv.detect_common_objects(image, confidence=0.20, model='yolov3-tiny')
     output_image = draw_bbox(image, boundingbox, label, conf)
-
-    plt.imshow(output_image)
-
-    plt.show()
-    print('Number of Objects in the image is ',"Cars :",str(label.count('car'))," Bikes :",
-          str(label.count('motorcycle'))," Bicycles :",str(label.count('bicycle'))," Trucks :",
-          str(label.count('truck')),"Bus :",str(label.count('bus')))
     
-    
+    car=label.count('car')
+    bike=label.count('motorcycle')
+    bicycle=label.count('bicycle')
+    truck=label.count('truck')
+    bus=label.count('bus')
+
+    if not ((bike==0) and (car==0) and (truck==0) and (bus==0) and (bicycle==0)):
+        
+      print(len(label))
+      plt.imshow(output_image)
+
+      plt.show()
+      print('Number of Objects in the image is ',"Cars :",str(car)," Bikes :",
+            str(bike)," Bicycles :",str(bicycle)," Trucks :",
+            str(truck),"Bus :",str(bus))
+      
+      
     countJson={"Labels":
-        {"Cars":label.count('car'),
-          "Bikes":label.count('motorcycle'),           
-          "Bicycles":label.count('bicycle'),
-          "Trucks":label.count('truck'),
-          "Bus":label.count('bus')
+        {"Cars":car,
+          "Bikes":bike,           
+          "Bicycles":bicycle,
+          "Trucks":truck,
+          "Bus":bus
         }          
         }
 
-    allImageCount[imagePath]=countJson
+    allImageCount["img{:d}".format(count)]=countJson 
+
+    count += 1  
+              
+    
+    #boundingbox, label, conf = cv.detect_common_objects(image)
+
+  vidObj.release()
+  cv2.destroyAllWindows()  
 
 
 
 
 if __name__ == "__main__":
-  imglist=['indiantraffic.jpeg','traffic.jpeg']
-  for img in imglist:
-    countVeh(img)
+  # imglist=['indiantraffic.jpeg','traffic.jpeg']
+  # for img in imglist:
+  #   countVeh(img)
+  countVehicleVideo("red.mp4")
   
 
 with open('info.json', 'w') as json_file:

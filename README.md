@@ -71,11 +71,17 @@ Add additional notes about how to deploy this on a live system
 ## Built With (Tech Stack)
 
 * [Flutter](https://flutter.dev/) - The app development framework used.
+
 * [Node.js](https://nodejs.org/) - Website Backend development environment , also used to integrate ML project in a website.
+
 * [Keras](https://keras.io/) - The Machine Learning framework used for counting the the number of vehicles at each signal(object detection).
-* [Matplotlib](https://matplotlib.org/) - The Machine Learning framework used for counting the the number of vehicles at each signal(object detection).
-* [OpenCV](https://docs.opencv.org/master/d0/de3/tutorial_py_intro.html) - The Machine Learning framework used for counting the the number of vehicles at each signal(object detection).
+
+* [Matplotlib](https://matplotlib.org/) - The Library used for Visualization .
+
+* [OpenCV](https://docs.opencv.org/master/d0/de3/tutorial_py_intro.html) - The Library used for Image-Processing . 
+
 * [CVlib](https://www.cvlib.net/) - The Machine Learning framework used for counting the the number of vehicles at each signal(object detection).
+
 
 ## Authors
 
