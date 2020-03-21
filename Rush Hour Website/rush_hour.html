@@ -1,113 +1,358 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="rush_hour.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Rush Hour</title>
-   <style type="text/css">
-      
-      </style>
-      </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="rush_hour.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet"> 
 
+  <title>Rush Hour</title>
+  <style type="text/css">
+    .jumbotron {
+      height: 650px;
+      text-align: center;
+      background-image: url("./bg1.jpg");
+      background-size: stretch;
+    }
 
-  <body data-spy="scroll" data-target="#navbar" data-offset="150">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
-          <a class="navbar-brand" href="#"><i class="fa fa-car"></i>  Rush Hour</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item ">
-                <a class="nav-link" href="#jumbotron">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#cards">About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#footer">Download</a>
-                </li>
-              </ul>
-                
-              <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="Email" placeholder="Email" aria-label="Email">
-              <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-            </form>
-          </div>
-        </nav>
-        <div class="jumbotron" id="jumbotron" >
-            <h1 class="display-2" >Rush Hour</h1>
-            <p class="lead" >This is Why You should use this fantastic App.</p>
-            <hr class="my-4" >
-            
-            <p>Want to know more?.Join Our Community</p>
-            <form class="form-inline" >
-            <div class="col-auto">
-             <label class="sr-only" for="email">Email Address</label>
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">@</div>
-                  </div>
-                  <input type="text" class="form-control" id="email" placeholder="Your Email">
-                </div>
-              </div>
-              <div>
-                  <button type="submit" class="btn btn-primary mb-2">Sign Up</button>
-                </div> 
-            
+    #navbar {
+      background-color:greenyellow ;
+    }
 
-           </form>
-            
-          </div>
+    #mast{
+      font-family: 'Abril Fatface', cursive;
+      margin-top: 200px;
+      font-size: 175px;
+      color: darkorange;
+    }
 
-          <div class="container">
-            <div  id="appSummary">
-              <h1>Why This Project Is Awesome</h1>
-             
-              <p class="lead" >Project Summary </p>
-            </div>
-          </div>
-           
-          
-     
-    <div class="container">
-    <div class="card">
-        <div class="card-body">
-            RUSH HOUR is a traffic management project, incorporating the fields of Machine Learning, Web Development and App Development.
-            At each traffic signal, for each side, it counts the number of cars, scooters, buses, etc., and then assigns a corresponding 
-            priority and time for that particular signal, instead of just assigning a fixed time to all irrespective of the number of vehicles 
-            present at that time. Thus, this will save time of the commuters. Also, it contains a special feature for ambulances, fire-fighters 
-            and other emergency-response teams to mark in their location of their starting and destination points and according to it, 
-            algorithms of all the traffic signals along that way will be altered in a certain way, allowing the emergency vehicles to pass the 
-            signal without any stopping at the signal.
+    #mast1{
+      font-size: 40px;
+    }
+
+    a:visited {
+      color: inherit;
+    }
+
+    #social {
+      width: 80px;
+      perspective: 1000px;
+    }
+
+    .cube {
+      margin: center;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      transform-style: preserve-3d;
+      transition: transform 2.5s ease;
+      text-decoration-color: white;
+    }
+
+    .cube:hover {
+      transform: rotateX(180deg) rotateY(720deg);
+    }
+
+    .side {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration-color: white;
+    }
+
+    .side.back {
+      transform: translateZ(-20px) rotateX(180deg);
+    }
+
+    .side.left {
+      transform: translateX(-20px) rotateY(-90deg);
+    }
+
+    .side.right {
+      transform: translateX(20px) rotateY(90deg);
+    }
+
+    .side.front {
+      transform: translateZ(20px);
+    }
+
+    .side.top {
+      transform: translateY(-20px) rotateX(90deg);
+    }
+
+    .side.bottom {
+      transform: translateY(20px) rotateX(90deg);
+    }
+
+    .side.grey {
+      color: #777;
+      background-color: white;
+      width: 40px;
+      height: 40px;
+    }
+
+    .side.black {
+      color: white;
+      background-color: #ff0000;
+      width: 40px;
+      height: 40px;
+    }
+
+    .side.twitter {
+      color: white;
+      background-color: #0084b4;
+      width: 40px;
+      height: 40px;
+    }
+
+    .side.facebook {
+      color: white;
+      background-color: #3b5998;
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="150">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
+    <a class="navbar-brand" href="#"><i class="fa fa-car"></i> Rush Hour</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="#jumbotron">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cards">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">Download</a>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="Email" placeholder="Email" aria-label="Email">
+        <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+      </form>
+    </div>
+  </nav>
+  <div class="jumbotron" id="jumbotron">
+    <h1 class="display-2" id="mast">RUSH HOUR</h1>
+    <p class="lead" id="mast1">This is Why You should use this fantastic Project.</p>
+    <hr class="my-4">
+  </div>
+  <p align="center">Want to know more?.Join Our Community</p>
+  <form class="form-inline">
+    <div class="col-auto">
+      <label class="sr-only" for="email">Email Address</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
         </div>
+        <input type="text" class="form-control" id="email" placeholder="Your Email">
       </div>
     </div>
+    <div class="col-auto">
+      <label class="sr-only" for="email">Email Address</label>
+      <div class="input-group mb-2">
+        <!-- <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div> -->
+        <input type="text" class="form-control" id="password" placeholder="Your Password">
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary mb-2">Sign Up</button>
+    </div>
+  </form>
 
-     <div id="footer">
-       <div >
-         <h1>Rush Hour</h1>
-         <p class="lead"> Click Here!</p>
-         <a href="https://www.apple.com/ios/app-store/"><img id="app" src="app_store.jfif" alt="Link To App Store"></a>
-         <a href="https://play.google.com/store?hl=en"><img id="app" src="play_store.jfif" alt="Link to Play Store"></a>
-       </div>
-     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-  
-  </body>
+  </div>
+
+  <div class="container">
+    <div id="appSummary">
+      <h1>Why This Project Is Awesome</h1>
+
+      <p class="lead">Project Summary </p>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        RUSH HOUR is a traffic management project, incorporating the fields of Machine Learning, Web Development and App
+        Development.
+        At each traffic signal, for each side, it counts the number of cars, scooters, buses, etc., and then assigns a
+        corresponding
+        priority and time for that particular signal, instead of just assigning a fixed time to all irrespective of the
+        number of vehicles
+        present at that time. Thus, this will save time of the commuters. Also, it contains a special feature for
+        ambulances, fire-fighters
+        and other emergency-response teams to mark in their location of their starting and destination points and
+        according to it,
+        algorithms of all the traffic signals along that way will be altered in a certain way, allowing the emergency
+        vehicles to pass the
+        signal without any stopping at the signal.
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div>
+      <h1>Rush Hour</h1>
+      <p class="lead"> Click Here to Download the Apps!</p>
+      <table border="0px" align="center">
+        <tr>
+          <td>
+            <a href="https://www.apple.com/ios/app-store/"><img id="app" src="app_store.jfif"
+                alt="Link To App Store"></a>
+          </td>
+          <td>
+            <p>
+              App Store
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://play.google.com/store?hl=en"><img id="app" src="play_store.jfif"
+                alt="Link to Play Store"></a>
+          </td>
+          <td>
+            <p>
+              Google Play Store
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <table border="0px" align="center">
+      <tr>
+        <td width="16%">
+          <a href="https://www.youtube.com/channel/UCAepkrKRuWbiW37R9UxK6pQ?view_as=subscriber" target="_blank">
+            <div class="container" id="social">
+              <div class="cube">
+                <div class="side back black">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div class="side left grey">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div class="side front grey">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div class="side right grey">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div class="side top grey">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div class="side bottom grey">
+                  <i class="fab fa-youtube"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </td>
+        <td width="16%">
+          <a href="https://twitter.com/RohanNishant2" target="_blank">
+            <div class="container" id="social">
+              <div class="cube">
+                <div class="side back twitter">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="side left grey">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="side front grey">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="side right grey">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="side top grey">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="side bottom grey">
+                  <i class="fab fa-twitter"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </td>
+        <td width="16%">
+          <a href="https://www.facebook.com/rohan.nishant.56" target="_blank">
+            <div class="container" id="social">
+              <div class="cube">
+                <div class="side back facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="side left grey">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="side front grey">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="side right grey">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="side top grey">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="side bottom grey">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Youtube
+        </td>
+        <td>
+          Twitter
+        </td>
+        <td>
+          Facebook
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+</body>
 
 </html>
