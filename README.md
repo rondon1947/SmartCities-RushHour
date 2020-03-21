@@ -80,7 +80,8 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+The Deployment of this project requires some Iot and other Hardware stack. But we have provided a UI script file for the software simulation of the traffic lights at the signal, working according to our algorithm.
+
 
 ## Built With (Tech Stack)
 

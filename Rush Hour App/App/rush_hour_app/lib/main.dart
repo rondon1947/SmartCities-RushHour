@@ -2,20 +2,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rushhourapp/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'theme.dart' as Theme;
 import 'bubble_indication_painter.dart';
 import 'Widgets/location.dart';
+import 'package:url_launcher/url_launcher.dart';
+import './providers/auth.dart';
+import './screens/auth_screen.dart';
+
 
 void main() => runApp(MaterialApp(
-  home: MyApp(),
-));
+      home: MyApp(),
+    ));
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-//    const PrimaryColor = const Color(0xFF151026);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(200, 194, 43, 23),
@@ -59,7 +61,7 @@ class _LoginPageState extends State<LoginPage>
   TextEditingController signupNameController = new TextEditingController();
   TextEditingController signupPasswordController = new TextEditingController();
   TextEditingController signupConfirmPasswordController =
-  new TextEditingController();
+      new TextEditingController();
 
   PageController _pageController;
 
@@ -357,7 +359,8 @@ class _LoginPageState extends State<LoginPage>
                             fontFamily: "WorkSansBold"),
                       ),
                     ),
-                    onPressed: () => /*showInSnackBar("Login button pressed")*/ LocationInput()),
+                    onPressed:
+                        () => /*showInSnackBar("Login button pressed")*/ LocationInput()),
               ),
             ],
           ),
@@ -428,7 +431,7 @@ class _LoginPageState extends State<LoginPage>
               Padding(
                 padding: EdgeInsets.only(top: 10.0, right: 40.0),
                 child: GestureDetector(
-                  onTap: () => showInSnackBar("Facebook button pressed"),
+                  onTap: () => _launchURL,
                   child: Container(
                     padding: const EdgeInsets.all(15.0),
                     decoration: new BoxDecoration(
@@ -445,7 +448,7 @@ class _LoginPageState extends State<LoginPage>
               Padding(
                 padding: EdgeInsets.only(top: 10.0),
                 child: GestureDetector(
-                  onTap: () => showInSnackBar("Google button pressed"),
+                  onTap: () => _launchURL1,
                   child: Container(
                     padding: const EdgeInsets.all(15.0),
                     decoration: new BoxDecoration(
@@ -464,6 +467,24 @@ class _LoginPageState extends State<LoginPage>
         ],
       ),
     );
+  }
+
+  _launchURL() async {
+    const url = 'https://www.facebook.com';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURL1() async {
+    const url = 'https://www.gmail.com';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   Widget _buildSignUp(BuildContext context) {
@@ -659,10 +680,12 @@ class _LoginPageState extends State<LoginPage>
                           fontFamily: "WorkSansBold"),
                     ),
                   ),
-                  onPressed: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (context) {
-                        return MyApp1();
-                      })),
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return LocationInput();
+                    }),
+                  ),
                 ),
               ),
             ],
@@ -698,225 +721,5 @@ class _LoginPageState extends State<LoginPage>
     setState(() {
       _obscureTextSignupConfirm = !_obscureTextSignupConfirm;
     });
-  }
-}
-
-class MyApp1 extends StatelessWidget {
-  void callCamera() {
-    print('Camera Called...');
-  }
-
-  void callRating() {
-    print('Rating Page called...');
-  }
-
-  void callContribution() {
-    print('Contribution Page Called...');
-  }
-
-//  void changeToLoginScreen(context) {
-//    print("hello");
-//    Navigator.push(context, MaterialPageRoute(builder: (context) {
-//      return MyApp1();
-//    }));
-//  }
-
-  Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(200, 194, 43, 23),
-          title: Text(
-            "Project Visudh - प्रोजेक्ट विशुद्ध",
-            textAlign: TextAlign.center,
-            style: GoogleFonts.hind(),
-          ),
-        ),
-        body: new Stack(
-          children: <Widget>[
-            new Container(
-              decoration: new BoxDecoration(
-                image: new DecorationImage(
-                  image: new AssetImage("assets/bg.png"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            new Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: Container(),
-                  ),
-                  Container(
-//              constraints: BoxConstraints.expand(height: 100.0, width: 600.0),
-                    margin: EdgeInsets.all(0.0),
-                    child: new GarbageImage(),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 0.0),
-                    decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      boxShadow: <BoxShadow>[
-                        BoxShadow(
-                          color: Theme.Colors.loginGradientStart,
-                          offset: Offset(1.0, 6.0),
-                          blurRadius: 20.0,
-                        ),
-                        BoxShadow(
-                          color: Theme.Colors.loginGradientEnd,
-                          offset: Offset(1.0, 6.0),
-                          blurRadius: 20.0,
-                        ),
-                      ],
-                      gradient: new LinearGradient(
-                          colors: [
-                            Theme.Colors.loginGradientEnd,
-                            Theme.Colors.loginGradientStart
-                          ],
-                          begin: const FractionalOffset(0.2, 0.2),
-                          end: const FractionalOffset(1.0, 1.0),
-                          stops: [0.0, 1.0],
-                          tileMode: TileMode.clamp),
-                    ),
-                    child: MaterialButton(
-                      highlightColor: Colors.transparent,
-                      splashColor: Theme.Colors.loginGradientEnd,
-                      //shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5.0))),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 5.0, horizontal: 5.0),
-                        child: Text(
-                          "Capture Garbage Image",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontFamily: "WorkSansBold"),
-                        ),
-                      ),
-                      onPressed: () => Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                            return MyApp1();
-                          })),
-                    ),
-                  ),
-                  new Expanded(
-                    child: Container(),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(0.0),
-                    child: new NGOImage(),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 0.0),
-                    decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      boxShadow: <BoxShadow>[
-                        BoxShadow(
-                          color: Theme.Colors.loginGradientStart,
-                          offset: Offset(1.0, 6.0),
-                          blurRadius: 20.0,
-                        ),
-                        BoxShadow(
-                          color: Theme.Colors.loginGradientEnd,
-                          offset: Offset(1.0, 6.0),
-                          blurRadius: 20.0,
-                        ),
-                      ],
-                      gradient: new LinearGradient(
-                          colors: [
-                            Theme.Colors.loginGradientEnd,
-                            Theme.Colors.loginGradientStart
-                          ],
-                          begin: const FractionalOffset(0.2, 0.2),
-                          end: const FractionalOffset(1.0, 1.0),
-                          stops: [0.0, 1.0],
-                          tileMode: TileMode.clamp),
-                    ),
-                    child: MaterialButton(
-                      highlightColor: Colors.transparent,
-                      splashColor: Theme.Colors.loginGradientEnd,
-                      //shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5.0))),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 5.0, horizontal: 5.0),
-                        child: Text(
-                          "Rate the NGOs",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontFamily: "WorkSansBold"),
-                        ),
-                      ),
-                      onPressed: () => Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                            return MyApp1();
-                          })),
-                    ),
-                  ),
-                  new Expanded(
-                    child: Container(),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(0.0),
-                    child: new PastImage(),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 0.0),
-                    decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      boxShadow: <BoxShadow>[
-                        BoxShadow(
-                          color: Theme.Colors.loginGradientStart,
-                          offset: Offset(1.0, 6.0),
-                          blurRadius: 20.0,
-                        ),
-                        BoxShadow(
-                          color: Theme.Colors.loginGradientEnd,
-                          offset: Offset(1.0, 6.0),
-                          blurRadius: 20.0,
-                        ),
-                      ],
-                      gradient: new LinearGradient(
-                          colors: [
-                            Theme.Colors.loginGradientEnd,
-                            Theme.Colors.loginGradientStart
-                          ],
-                          begin: const FractionalOffset(0.2, 0.2),
-                          end: const FractionalOffset(1.0, 1.0),
-                          stops: [0.0, 1.0],
-                          tileMode: TileMode.clamp),
-                    ),
-                    child: MaterialButton(
-                      highlightColor: Colors.transparent,
-                      splashColor: Theme.Colors.loginGradientEnd,
-                      //shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5.0))),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 5.0, horizontal: 5.0),
-                        child: Text(
-                          "See Your Previous Contributions",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontFamily: "WorkSansBold"),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      onPressed: () => Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                            return MyApp1();
-                          })),
-                    ),
-                  ),
-                  new Expanded(
-                    child: Container(),
-                  ),
-                ],
-              ),
-            )
-          ],
-        ));
   }
 }
