@@ -29,6 +29,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   font_awesome_flutter: ^8.0.1
+  location: ^2.3.5
 
 
 # For information on the generic Dart part of this file, see the

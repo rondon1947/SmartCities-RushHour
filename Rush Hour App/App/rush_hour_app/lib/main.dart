@@ -6,6 +6,7 @@ import 'package:rushhourapp/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'theme.dart' as Theme;
 import 'bubble_indication_painter.dart';
+import 'Widgets/location.dart';
 
 void main() => runApp(MaterialApp(
   home: MyApp(),
@@ -356,7 +357,7 @@ class _LoginPageState extends State<LoginPage>
                             fontFamily: "WorkSansBold"),
                       ),
                     ),
-                    onPressed: () => showInSnackBar("Login button pressed")),
+                    onPressed: () => /*showInSnackBar("Login button pressed")*/ LocationInput()),
               ),
             ],
           ),

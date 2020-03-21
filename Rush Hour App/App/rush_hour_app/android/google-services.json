@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "211837364210",
+    "firebase_url": "https://rush-hour-app-6a283.firebaseio.com",
+    "project_id": "rush-hour-app-6a283",
+    "storage_bucket": "rush-hour-app-6a283.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211837364210:android:e49760d34798f1c46aed6b",
+        "android_client_info": {
+          "package_name": "com.sih.rushhourapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211837364210-cg6j1aqb5svmv3nrrpvkopb88vrepg42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2YLO0XfKXaEtE2REHlGH7b6MF2abqZ1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211837364210-cg6j1aqb5svmv3nrrpvkopb88vrepg42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
