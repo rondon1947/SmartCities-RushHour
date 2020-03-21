@@ -31,3 +31,18 @@ and thus, this loop would go on.
 If any road is found that there will be an emergency vehicle coming then its priority is made the highest. This road will get the green signal first. This will decrease the time of journey (source to destination) for that vehicle. This will be very useful in the case of ambulance, fire extinguisher etc. when the emergency vehicle has gone than the system runs normally.
 
 ### Continuing the above example:
+
+If an ambulance will cross the signal through side C, then, the following will happen:
+* Before the ambulance reaches at a distance of about 500 m from the signal, the algorithm will work as it is.
+* When the ambulance reaches at a distance of 500 m from the signal, the priority assigned will be as follows:
+    * B = 1
+    * A = 2
+    * D = 3
+    * C = -10
+* When the ambulance will cross a distance of 100 m from the signal, the priority will now become as:
+    * C = 1
+    * B = -10
+    * A = -10
+    * D = -10
+    
+    This will remain till the ambulance crosses the signal, after which, the algorithm will again work in the normal way.
