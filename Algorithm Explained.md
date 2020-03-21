@@ -1,0 +1,5 @@
+# Algorithm for Traffic Signals
+
+In this, we are simply finding number of vehicles present at left side of each road. The number is always find after the fixed amount of time. The road with the maximum number of vehicles is chosen and its signal is made green. So, time is assigned according to the number of vehicles present in that road. There is maximum time initially assigned ie no road can have green signal more than that time even if all vehicles have not passed. If a road was chosen then it can not be chosen till all other roads have chosen atleast one time ie its priority is made zero or decreased. In this way, each road gets its green signal for some time depending on the number of vehicles.
+
+If any road is found that there will be an emergency vehicle coming then its priority is made the highest. This road will get the green signal first. This will decrease the time of journey (source to destination) for that vehicle. This will be very useful in the case of ambulance, fire extinguisher etc. when the emergency vehicle has gone than the system runs normally.
