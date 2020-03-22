@@ -48,34 +48,9 @@ This contains a step by step series of examples that tell anyone how to get a de
 
 ```
 Steps:
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## Running the tests
-
-This explains how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+1. Go to the 'Rush Hour UI' Folder.
+2. Run the 'pip install -r requirements.txt' command.
+3. Run './run.sh' command.
 ```
 
 ## Deployment
