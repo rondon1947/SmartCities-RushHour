@@ -115,6 +115,9 @@ The Deployment of this project requires some Iot and other Hardware stack. But w
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+A very heartful thanks to the authors and owners of the following articles which helped understand and re-build the traffic management system.
+
+* [Article 1](https://ieeexplore.ieee.org/document/5234418)
+* [Article 2](https://www.researchgate.net/publication/323549873_Intelligent_Traffic_Management_System_for_Smart_Cities/citation/download)
+
+And also lots of gratitude for the whole team of "HackNITR 2020" for providing us the perfect platform to showcase out idea.
