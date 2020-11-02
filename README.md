@@ -3,7 +3,7 @@
 For the "HackNITR" Hackathon 2020
 
 # Rush Hour - The Traffic Management Project
-
+###[Youtube Video](https://youtu.be/PmwC2LU8lcc)
 Our project is from the track - "Smart Cities". It is a traffic management project, incorporating the fields of Machine Learning, Web Development, and App Development. At each traffic signal, for each side, it counts the number of cars, scooters, buses, etc, and then assigns a corresponding priority and time for that particular signal, instead of just assigning a fixed time to all irrespective of the number of vehicles present at that time. Thus, this will save the time of the commuters. Also, our project contains a special feature for ambulances, fire-fighters, and other emergency-response teams to mark in the location of their starting and destination points and according to it, algorithms of all the traffic signals along that way will be altered in a certain way, allowing the emergency vehicles to pass the signal without any stopping at the signal.
 
 ### The different fields of our project include:
