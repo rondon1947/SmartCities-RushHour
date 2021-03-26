@@ -61,7 +61,7 @@ kiwisolver==1.1.0
 lazy-object-proxy==1.4.3
 LibAppArmor==2.13.3
 louis==3.13.0
-lxml==4.5.0
+lxml==4.6.3
 mallard-ducktype==1.0.2
 Markdown==3.2.1
 MarkupSafe==1.1.1
