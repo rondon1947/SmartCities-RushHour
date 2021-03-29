@@ -104,7 +104,7 @@ pycodestyle==2.5.0
 pycups==1.9.74
 pycurl==7.43.0.5
 pyflakes==2.1.1
-Pygments==2.5.2
+Pygments==2.7.4
 PyGObject==3.34.0
 pylint==2.4.4
 PyOpenGL==3.1.5
