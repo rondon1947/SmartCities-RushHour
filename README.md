@@ -95,5 +95,6 @@ A very heartful thanks to the authors and owners of the following articles which
 
 - [Article 1](https://ieeexplore.ieee.org/document/5234418)
 - [Article 2](https://www.researchgate.net/publication/323549873_Intelligent_Traffic_Management_System_for_Smart_Cities/citation/download)
+- [Article 3](https://www.researchgate.net/publication/275341735_Real_Time_Optimized_Traffic_Management_Algorithm_for_Intelligent_Transportation_Systems)
 
 And also lots of gratitude for the whole team of "HackNITR 2020" for providing us the perfect platform to showcase our idea.
