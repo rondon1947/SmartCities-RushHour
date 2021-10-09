@@ -1,6 +1,6 @@
 # Algorithm for Traffic Signals
 
-## Normal Scenario
+## Normal Scenario :
 
 In this, we are finding out the number of vehicles present on the left side of each road. These numbers are always found out after a fixed amount of time. When this project is run for the first time, the road with the maximum number of vehicles is chosen and its signal is made green. This time fo the green signal is assigned according to the number of vehicles present on that road. There is a maximum time-limit, decided beforehand, i.e., no road can have a green signal on for more than that time even if all vehicles have not passed. If a road was chosen at any point in time, then it can not be chosen again till all other roads have been chosen at least once, i.e., its priority is made zero or negative. In this way, each road gets its green signal at least for some time in the loop, depending on the number of vehicles.
 
