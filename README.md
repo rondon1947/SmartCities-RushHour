@@ -1,4 +1,4 @@
-# HackNITR 2020 
+# HackNITR 2020  
 
 For the "HackNITR" Hackathon 2020
 
