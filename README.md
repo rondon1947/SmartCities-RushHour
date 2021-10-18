@@ -52,9 +52,11 @@ This contains a step by step series of examples that tell anyone how to get a de
 
 ```
 Steps:
+
 1. Go to the 'Rush Hour UI' Folder.
 2. Run the 'pip install -r requirements.txt' command.
 3. Run './run.sh' command.
+
 ```
 
 ## Deployment
